@@ -1,0 +1,25 @@
+### 'Проверка сервиса'
+POST http://localhost:8080/templateService/api/echo
+Content-Type: application/json
+
+echo
+
+### 'Версия'
+GET http://localhost:8080/templateService/api/getVersion
+Content-Type: application/json
+
+### Информация о приложении
+GET http://localhost:8080/templateService/monitor/info
+Content-Type: application/json
+
+### Список логгеров
+GET http://localhost:8080/templateService/monitor/loggers
+Content-Type: application/json
+
+### Метрики
+GET http://localhost:8080/templateService/monitor
+Content-Type: application/json
+
+### Прометеус
+GET http://localhost:8080/templateService/monitor/prometheus
+Content-Type: application/json

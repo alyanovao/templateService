@@ -1,0 +1,25 @@
+version: '3'
+services:
+  templateService:
+    image: templateservice:v0.0.1
+    container_name: "templateService"
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    ports:
+      - "8800:8100"
+    environment:
+      - JAVA_OPTS=-Xms128m-Xmx128m
+      #- SPRING_DATASOURCE_DRIVER_CLASS_NAME=oracle.jdbc.OracleDriver
+      #- SPRING_DATASOURCE_URL=jdbc:oracle:thin:0.0.0.0:0/sid
+      #- SPRING_DATASOURCE_USERNAME=LOGIN
+      #- SPRING_DATASOURCE_PASSWORD=PASSWORD
+      #- SPRING_DATASOURCE_HIKARI_MINIMUM_IDLE=5
+      #- SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE=15
+      #- SPRING_DATASOURCE_HIKARI_IDLE_TIMEOUT=10000
+      #- SPRING_DATASOURCE_HIKARI_MAX_LIFETIME=1800000
+      - VM_TIMEOUT=600000
+    networks:
+      - network
+networks:
+  network:
